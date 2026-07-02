@@ -68,12 +68,16 @@
             allow use of regular expressions without instantiating a Regex explicitly.
             </summary>
     <remarks>
-      <para>
-            The <see cref="T:System.Text.RegularExpressions.Regex" /> class represents the .NET regular expression engine.
-            It can be used to quickly parse large amounts of text to find specific character patterns;
-            to extract, edit, replace, or delete text substrings; and to add the extracted strings to a
-            collection to generate a report.
-            </para>
+          <format type="text/markdown"><![CDATA[
+
+## Remarks
+
+ The `Regex` class represents the .NET regular expression engine. It can be used to quickly parse large amounts of text to find specific character patterns; to extract, edit, replace, or delete text substrings; and to add the extracted strings to a collection to generate a report.
+
+> [!WARNING]
+> Unrestricted use of this class with untrusted input can subject applications to [denial-of-service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). Consult [Best practices for regular expressions in .NET](/dotnet/standard/base-types/best-practices-regex) for guidance on how to safely use this class with untrusted input.
+
+ ]]></format>
     </remarks>
     <threadsafe>The <see cref="T:System.Text.RegularExpressions.Regex" /> class is immutable (read-only) and thread safe. <see cref="T:System.Text.RegularExpressions.Regex" /> objects can be created on any thread and shared between threads. For more information, see <see href="/dotnet/standard/base-types/thread-safety-in-regular-expressions">Thread Safety</see>.</threadsafe>
     <altmember cref="T:System.Configuration.RegexStringValidator" />
@@ -198,9 +202,6 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
-
-> [!WARNING]
-> When using <xref:System.Text.RegularExpressions> to process untrusted input, pass a [time-out value](/dotnet/standard/base-types/best-practices-regex#use-time-out-values) to prevent malicious users from causing a [denial-of-service attack](https://www.cisa.gov/news-events/news/understanding-denial-service-attacks). A time-out value specifies how long a pattern-matching method should try to find a match before it times out.
 
  The `pattern` parameter consists of regular expression language elements that symbolically describe the string to match. For more information about regular expressions, see the [.NET Regular Expressions](/dotnet/standard/base-types/regular-expressions) and [Regular Expression Language - Quick Reference](/dotnet/standard/base-types/regular-expression-language-quick-reference) topics.
 
@@ -346,9 +347,6 @@
           <format type="text/markdown"><![CDATA[
 
 ## Remarks
-
-> [!WARNING]
-> When using <xref:System.Text.RegularExpressions> to process untrusted input, pass a [time-out value](/dotnet/standard/base-types/best-practices-regex#use-time-out-values) to prevent malicious users from causing a [denial-of-service attack](https://www.cisa.gov/news-events/news/understanding-denial-service-attacks). A time-out value specifies how long a pattern-matching method should try to find a match before it times out.
 
  The `pattern` parameter consists of regular expression language elements that symbolically describe the string to match. For more information about regular expressions, see the [.NET Regular Expressions](/dotnet/standard/base-types/regular-expressions) and [Regular Expression Language - Quick Reference](/dotnet/standard/base-types/regular-expression-language-quick-reference) topics.
 
